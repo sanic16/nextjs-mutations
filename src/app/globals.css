@@ -1,0 +1,84 @@
+:root{
+    --border-radius-1: 0.25rem;
+    --border-radius-2: 0.5rem;
+    --border-radius-3: 0.75rem;
+    --border-radius-4: 1rem;
+
+    --transition: 300ms ease;
+}
+
+*::before,
+*::after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    background-color: #222;
+    color: #ccc;
+}
+
+section{
+    margin-top: 5rem;
+    padding-top: 2rem;
+    width: 80%;
+    margin-inline: auto;
+}
+
+input,
+textarea
+{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-1);
+    resize: none;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    border-radius: var(--border-radius-1);
+    font-weight: 500;
+    transition: var(--transition);
+    color: #000;
+    cursor: pointer;
+}
+
+.btn.primary{
+    background-color: hsl(40, 88%, 42%);
+}
+
+.btn.danger{
+    background-color: hsl(350, 88%, 42%);
+}
+
+.btn.action{
+    background-color: hsl(120, 88%, 42%);
+}
+
+@media screen and (max-width: 1024px){
+    section{
+        width: 90%;
+    }
+}

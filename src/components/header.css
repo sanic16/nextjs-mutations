@@ -1,0 +1,30 @@
+.main-header{
+    background-color: hsl(40, 88%, 42%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100vw;
+    box-shadow: 0 0 1rem hsla(40, 88%, 42%, .5);
+    display: grid;
+    place-items: center;
+}
+
+.header__logo{
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.header__container{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container nav ul{
+    display: flex;
+    gap: 1rem;
+}
