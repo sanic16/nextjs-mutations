@@ -2,6 +2,19 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
 
+type WriteUser = {
+    first_name: string
+    last_name: string
+    email: string
+    password: string    
+}  
+
+type WritePost = {
+    image_url: string
+    title: string
+    content: string
+}
+
 const getUsers = (): Array<WriteUser> => {
     return [
         {
