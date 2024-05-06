@@ -64,7 +64,7 @@ async function createPost(prevState: {errors: string[]}, formData: FormData){
         errors
       }
     }else{
-      revalidatePath('/feed')
+      revalidatePath('/feed', 'page')
       redirect('/feed')
     }
   }  
@@ -88,7 +88,7 @@ async function deletePost(id: number){
         }
     }
 
-    revalidatePath('/feed')
+    revalidatePath('/feed', 'page')
     redirect('/feed')
 }
 
