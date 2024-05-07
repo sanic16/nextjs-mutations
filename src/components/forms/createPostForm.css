@@ -37,3 +37,9 @@
     justify-content: center;
     gap: 1rem;
 }
+
+@media screen and (max-width: 1024px){
+    .form__wrapper{
+        width: 100%;
+    }
+}

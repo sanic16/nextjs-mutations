@@ -73,7 +73,7 @@ const getUsers = async () => {
     return users
 }
 
-const getuser = async (id: number) => {
+const getUser = async (id: number) => {
     const user = await prisma.user.findUnique({
         where: {
             id
@@ -89,7 +89,17 @@ const getuser = async (id: number) => {
     return user
 }
 
-const createuser = async (user: WriteUser) => {
+const getUserByEmail = async (email: string) => {
+    const user = await prisma.user.findUnique({
+        where: {
+            email
+        },
+    })
+
+    return user
+}
+
+const createUser = async (user: WriteUser) => {
     const newUser = await prisma.user.create({
         data: user,
         select: {
@@ -149,8 +159,9 @@ export {
     createPost,
     deletePost,
     getUsers,
-    getuser,
-    createuser,
+    getUser,
+    getUserByEmail,
+    createUser,
     getUserPosts,
     likePost,
     unlikePost

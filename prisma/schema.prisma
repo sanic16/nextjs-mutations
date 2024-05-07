@@ -24,6 +24,14 @@ model User{
   updated_at DateTime @updatedAt 
   likes Like[]
   posts Post[]
+  sessions Session[]
+}
+
+model Session{
+  id String @id @default(uuid())
+  userId Int 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
 }
 
 model Post{

@@ -1,0 +1,9 @@
+.form__wrapper small{
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.form__wrapper small a{
+    color: hsl(40, 88%, 42%);
+    text-decoration: underline;
+}
